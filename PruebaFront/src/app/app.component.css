@@ -1,0 +1,22 @@
+.size-img{
+    margin-top: 10%;
+    width: 60%;
+    height: auto;
+    text-align: center;
+}
+.botones{
+    display: grid;
+    margin-top: 10px;
+    text-align: center;
+    margin-left: 10%;
+}
+.card{
+    width: 75%;
+    margin-top: 15px;
+    border:solid 5px #ccc;
+    border-radius:15px;
+    box-shadow: 0px 1px 2px 3px #5c6fe7;
+    text-align: center;
+    margin-left: 8%;
+    height: auto;
+}

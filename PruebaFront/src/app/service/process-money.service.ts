@@ -10,11 +10,13 @@ export class ModelMoney {
 
     constructor(){
       this.money_50 = new Coin;
+     
       this.money_100 =new Coin;
       this.money_200 =new Coin;
       this.money_500 =new Coin;
       this.money_1000 =new Coin;
       this.total =new Coin;
+      
     }
 }
 

@@ -15,33 +15,69 @@
       </div>
     </div>
   </nav>
-  <h2 class="text-center mt-3">ALCANCIA AHORRATIVA</h2>
+  
   <div>
     <div class="row">
-      <div class="col">
+      <div class=" col-sm-12 col-md-6 col-xs-12 text-center">
         <img src="../assets/img/logo.png" alt="" class="size-img">
       </div>
-      <div class="col">
+      <div class=" col-sm-12 col-md-6 col-xs-12">
         <div class="mt-5">
-          <label for="" class="fs-3 fw-bold">Clic sobre moneda a depositar en la alcancia</label>
-          <div class="d-flex mt-3">
-            <button class="btn btn-primary btn-lg mr-2" (click)="addMoney('money_50', 50)">50 pesos</button>
-            <button class="btn btn-primary mr-2" (click)="addMoney('money_100', 100)">100 pesos</button>
-            <button class="btn btn-primary mr-2" (click)="addMoney('money_200', 200)">200 pesos</button>
-            <button class="btn btn-primary mr-2" (click)="addMoney('money_500', 500)">500 pesos</button>
-            <button class="btn btn-primary mr-2" (click)="addMoney('money_1000', 1000)">1000 pesos</button>
+          <label for="" class="fs-3 fw-bold mr-4">Clic sobre moneda a depositar en la alcancia</label>
+          <div class="botones ">
+            <button class="btn btn-primary mt-2 w-75" (click)="addMoney('money_50', 50)"> 50 pesos</button>
+            <button class="btn btn-primary mt-2 w-75" (click)="addMoney('money_100', 100)">100 pesos</button>
+            <button class="btn btn-primary mt-2 w-75" (click)="addMoney('money_200', 200)">200 pesos</button>
+            <button class="btn btn-primary mt-2 w-75" (click)="addMoney('money_500', 500)">500 pesos</button>
+            <button class="btn btn-primary mt-2 w-75" (click)="addMoney('money_1000', 1000)">1000 pesos</button>
           </div>
-          <h3 class="mt-3">Total depositado: <span>{{ moneyObj.total | json }}</span></h3>
-          <div class="d-flex-columns">
-            <label for="" class="mt-2 fw-bold">Moneda de 50 pesos: <span>{{ moneyObj.money_50 | json }}</span></label><br>
-            <label for="" class="mt-2 fw-bold">Moneda de 100 pesos: <span>{{ moneyObj.money_100 | json }}</span></label><br>
-            <label for="" class="mt-2 fw-bold">Moneda de 200 pesos: <span>{{ moneyObj.money_200 | json }}</span></label><br>
-            <label for="" class="mt-2 fw-bold">Moneda de 500 pesos: <span>{{ moneyObj.money_500 | json }}</span></label><br>
-            <label for="" class="mt-2 fw-bold">Moneda de 1000 pesos: <span>{{ moneyObj.money_1000 | json }}</span></label><br>
+          <div class="card">
+            <div class="card-body">
+              <h3 class="mt-3">Total depositado: <span class="text-primary">{{ moneyObj.total.totalMoney }}</span> Pesos</h3>
+            </div>
           </div>
+          
+          <table class="table mt-4 w-75">
+            <thead>
+              <tr>
+                <th scope="col">Moneda</th>
+                <th scope="col">Cantidad de Monedas</th>
+                <th scope="col">Cuanto dinero tengo</th>
+                
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="text-center">
+                <th scope="row">50</th>
+                <td>{{ moneyObj.money_50.totalCoin }}</td>
+                <td>{{ moneyObj.money_50.totalMoney }}</td>
+                
+              </tr>
+              <tr class="text-center">
+                <th scope="row">100</th>
+                <td>{{ moneyObj.money_100.totalCoin }}</td>
+                <td>{{ moneyObj.money_100.totalMoney }}</td>
+                
+              </tr>
+              <tr class="text-center">
+                <th scope="row">200</th>
+                <td >{{ moneyObj.money_200.totalCoin }}</td>
+                <td>{{ moneyObj.money_200.totalMoney }}</td>
+              </tr>
+              <tr class="text-center">
+                <th scope="row">500</th>
+                <td >{{ moneyObj.money_500.totalCoin }}</td>
+                <td>{{ moneyObj.money_500.totalMoney }}</td>
+              </tr>
+              <tr class="text-center">
+                <th scope="row">1000</th>
+                <td >{{ moneyObj.money_1000.totalCoin }}</td>
+                <td>{{ moneyObj.money_1000.totalMoney }}</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-      </div>
+      </div>  
     </div>
-    
   </div>
 </div>
