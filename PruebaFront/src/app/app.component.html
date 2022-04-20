@@ -1,0 +1,47 @@
+<div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">JESUS TORRES</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  
+        </ul>
+        <form class="d-flex">
+          <button class="btn btn-outline-success" type="submit">PRUEBA TECNICA</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <h2 class="text-center mt-3">ALCANCIA AHORRATIVA</h2>
+  <div>
+    <div class="row">
+      <div class="col">
+        <img src="../assets/img/logo.png" alt="" class="size-img">
+      </div>
+      <div class="col">
+        <div class="mt-5">
+          <label for="" class="fs-3 fw-bold">Clic sobre moneda a depositar en la alcancia</label>
+          <div class="d-flex mt-3">
+            <button class="btn btn-primary btn-lg mr-2" (click)="addMoney('money_50', 50)">50 pesos</button>
+            <button class="btn btn-primary mr-2" (click)="addMoney('money_100', 100)">100 pesos</button>
+            <button class="btn btn-primary mr-2" (click)="addMoney('money_200', 200)">200 pesos</button>
+            <button class="btn btn-primary mr-2" (click)="addMoney('money_500', 500)">500 pesos</button>
+            <button class="btn btn-primary mr-2" (click)="addMoney('money_1000', 1000)">1000 pesos</button>
+          </div>
+          <h3 class="mt-3">Total depositado: <span>{{ moneyObj.total | json }}</span></h3>
+          <div class="d-flex-columns">
+            <label for="" class="mt-2 fw-bold">Moneda de 50 pesos: <span>{{ moneyObj.money_50 | json }}</span></label><br>
+            <label for="" class="mt-2 fw-bold">Moneda de 100 pesos: <span>{{ moneyObj.money_100 | json }}</span></label><br>
+            <label for="" class="mt-2 fw-bold">Moneda de 200 pesos: <span>{{ moneyObj.money_200 | json }}</span></label><br>
+            <label for="" class="mt-2 fw-bold">Moneda de 500 pesos: <span>{{ moneyObj.money_500 | json }}</span></label><br>
+            <label for="" class="mt-2 fw-bold">Moneda de 1000 pesos: <span>{{ moneyObj.money_1000 | json }}</span></label><br>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
